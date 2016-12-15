@@ -1,5 +1,14 @@
-cookie-clicker
+cookie-clicker541
 ==============
+
+equipe:
+
+-Thomas \SCREAMMASTER - 
+-Alex \SQUELETTE
+-Willy l'ourson \BOUTONCOOKI
+-Mika \JS
+-Fille \IMAGES
+-Yves \NORMES - MERGE
 
 
 ###NORME :
@@ -20,6 +29,25 @@ Dossier source commun : cookie_clicker541/
                         -index.html
 
 
+
+
+##FIRST-branch: 
+           -squelette
+           -boton_cookie
+           -java.function-click
+           -icon_clicker
+
+
+
+##CLASS\ID
+
+- ---- DIV ------- -
+ id="topbar" \\HODDER
+ id="game" \\centre page
+ id="cookie" \\Cookie clique
+ id="score" \\ score
+ id="leftbar" \\Bar de gauche
+ id="rightbar" \\bar droite 
 
 
 

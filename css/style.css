@@ -1,3 +1,7 @@
 #cookie{
 	padding:200px 200px 200px 200px;
 }
+img {
+
+	cursor: url(../img/cursor.png) 2 2, pointer;
+}

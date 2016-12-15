@@ -5,3 +5,6 @@ img {
 
 	cursor: url(../img/cursor.png) 2 2, pointer;
 }
+img:active{
+	cursor: url(../img/cursor2.png)2 2, pointer;
+	}

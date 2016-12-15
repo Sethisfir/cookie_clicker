@@ -1,15 +1,14 @@
+var score = 0;
+var click = 0
+var btn = document.getElementById("btn");
+btn.onclick = function () {
 
-
-var ClickCounterViewModel = function() {
-   this.numberOfClicks = ko.observable(0);
-
-   this.registerClick = function() {
-       this.numberOfClicks(this.numberOfClicks() + 1);
-   }
-   this.resetClicks = function() {
-       this.numberOfClicks(0);
-   }
-
+    if (click >= 1) {   
+        score = score + click;
+    } else {
+        score = score + 1;
+    }
+    document.getElementById("afficheur").innerHTML = score;
 }
 
-ko.applyBindings(new ClickCounterViewModel())
+

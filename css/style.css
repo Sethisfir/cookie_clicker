@@ -1,10 +1,32 @@
-#cookie{
-	padding:200px 200px 200px 200px;
-}
-img {
 
-	cursor: url(../img/cursor.png) 4 4, pointer;
+body {
+	font-color: white;
+     color: white;
+    background-image: url("fond.jpg");
+   	 background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:100%;
+    width:100%;
+   
 }
-img:active{
-	cursor: url(../img/cursor2.png) 4 4, pointer;
-	}
+ .centre {
+ 	text-align: center;
+ 	text-decoration: bold;
+ 	color: white;
+ 	font-size: 50px;
+ }
+
+
+
+button {
+	margin-left: 650px;
+}
+
+.h_score {
+	font-size: 70px;
+	text-decoration: bold;
+ 	color: white;
+ 	font-size: 50px;
+ 	float: right;
+}

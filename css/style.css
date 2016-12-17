@@ -18,15 +18,14 @@ body {
  }
 
 button {
-	margin-left: 650px;
+	
 }
 
 .h_score {
-	font-size: 70px;
 	text-decoration: bold;
  	color: white;
  	font-size: 50px;
- 	float: right;
+
 }
 img {
     cursor: url(../img/cursor.png) 2 2, pointer;
@@ -34,4 +33,12 @@ img {
 
 img:active {
     cursor: url(../img/cursor2.png) 2 2, pointer;
+}
+
+#conteneur{
+
+    width: 900px;
+    margin:auto;
+    text-align: center;
+
 }

@@ -1,5 +1,5 @@
 
-///////////////////////////////////////////////VARIABLE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////////////////////////VARIABLES\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 var score = 0;
 var click = 0;
@@ -37,5 +37,21 @@ btnr.onclick = function() {
 
 
 function cookieset(hscore){
-			document.cookie='hscore=' +hscore+"; expires= Sun, 28 Feb 2099 00:00:00 UTC";
+	document.cookie='hscore=' +hscore+"; expires= Sun, 28 Feb 2099 00:00:00 UTC; path=/"
 				}
+
+function readCookie(hscore) {
+	var hscoreEQ = hscore + "=";
+	var ca = document.cookie.split(';'); 
+	for(var i=0;i < ca.length;i++) { 												   //Recherche dans le tableau //
+		var c = ca[i];															   	  //c = cookie en cours;      //
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);					  	 //suppression des espace.   //
+		if (c.indexOf(hscoreEQ) == 0) return c.substring(hscoreEQ.length,c.length);	//retourn c.lenght - hscoreEQ.lenght//
+	}
+	return null;	
+}
+
+var x = readCookie("hscore");
+if (x) {
+	document.getElementById("hscore").innerHTML =hscore;
+}

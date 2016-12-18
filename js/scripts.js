@@ -1,12 +1,11 @@
 
 ///////////////////////////////////////////////VARIABLES\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-var score = 0;
-var click = 0;
-var hscore = 0;
-var multi = 2; 
-var prixmulti = 80;
-var prixmult = document.getElementById("prixmult")          //
+var score = 0;						//variable du score						
+var hscore = 0;						//variable du hightscore
+var multi = 2; 						//variable gerant le multiplicateur
+var prixmulti = 80;					//Prix de base pour debloquer le multiplicateur
+var prixmult = document.getElementById("prixmult")          
 var mult = document.getElementById("mult");
 var btn = document.getElementById("btn");
 var btnr = document.getElementById("btnr");
@@ -14,10 +13,10 @@ var afficheur =  document.getElementById("afficheur");
 
 ///////////////////////////////////////////FONCTION SCORE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-prixmult.innerHTML ="prix: " + prixmulti;
+prixmult.innerHTML ="prix: " + prixmulti;		//initialisation du prix multiplacateur à 80
 
-btn.addEventListener("click", function () {
-	if (multi >= 3){
+btn.addEventListener("click", function () {		
+	if (multi >= 3){			
 		score += multi -1;
 	}
 	else {
@@ -28,17 +27,17 @@ btn.addEventListener("click", function () {
 }, false);
 
 function multiplicateur() {
-	mult.innerHTML = "X" + multi;
+	mult.innerHTML = "X" + multi;			//affichage du multiplicateur
 	if (score < prixmulti) {
 		alert("Pas assez de cookies clic encore comme un abrutis parceque tu aime ça!!!!")
 	}
 	else if (score >= prixmulti) {
-		multi ++;
+		multi ++;					//incrementation de multi pour mise a jour de l'affichage(X2, X3,X4)
 		mult.innerHTML = "X" + multi;
-		score -= prixmulti;
+		score -= prixmulti;				//retire le prix du multiplicateur au score total
 		prixmulti = prixmulti*2;
-		prixmult.innerHTML ="prix: " + prixmulti;
-    	afficheur.innerHTML = score;
+		prixmult.innerHTML ="prix: " + prixmulti;       //affichage du nouveau prix du multiplicateur
+    		afficheur.innerHTML = score;                    //mise a jour du score dans l'afficheur
 	}
 
 
@@ -46,16 +45,16 @@ function multiplicateur() {
 }
 ///////////////////////////////////////////FONCTION RESET\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-btnr.onclick = function() {
+btnr.onclick = function() {                
 	if (score >= hscore) {
-		cookieset(score);
-		score = 0 
-		afficheur.innerHTML = 0;
+		cookieset(score); 
 	} 
-	else {
-		score = 0;
-		afficheur.innerHTML =0;
-	}
+	score = 0;
+	multi = 2;
+	prixmulti = 80;
+	afficheur.innerHTML =0;
+	mult.innerHTML = "X" + multi;
+	prixmult.innerHTML ="prix: " + prixmulti;
 }
 
 

@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<meta charset="utf-8">
+	
 	<head>
+		<meta charset="utf-8">
 		<title>cookie_clicker541</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 		<body>
-			<link rel="stylesheet" type="text/css" href="css/style.css">
+			<div id="conteneur">
 			
-        <h1 class="centre">Vous avez récolté <span id="afficheur" >0</span> Cookies !</h1>
-        <button><img src="img/cookie.png" id="btn"></img></button>
-        <button id="btnr">Reset !</button>
-        <h1 class="h_score">Hightscore <span id="hscore">0</span></h1>
+				
+        		<h1 class="centre">Vous avez récolté <span id="afficheur" >0</span> Cookies !</h1>
 
+        		<img src="img/cookie.png" id="btn" />
+
+        		<button id="btnr">Reset !</button>
+        		<button id="multiplicateur" onclick="multiplicateur()">Multiplicateur<span id="mult">X2</span></button>
+        		<p id="prixmult"></p>
+
+        		<h1 class="h_score">Hightscore <span id="hscore">0</span></h1>
+
+			</div>
    			<!--<img src="">
 			<div id="topbar" ></div>
 			<div id="game"></div>
